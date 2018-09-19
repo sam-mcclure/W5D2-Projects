@@ -1,0 +1,18 @@
+<!-- post show -->
+<h1><%= @post.title %></h1>
+<% if @post.url %>
+URL: <%= @post.url %>
+<br>
+<% end %>
+
+<% if @post.content %>
+Post Contents: <%= @post.content %>
+<br>
+<% end %>
+
+Posted in: <%= @post.sub.title %>
+<br>
+Author: <%= @post.author.username %>
+
+<br>
+<a href="<%= edit_post_url(@post) %>">Edit Post</a>
